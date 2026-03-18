@@ -1,3 +1,192 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lugrasimo&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libertinus+Serif+Display&display=swap");
+
 body {
-  background-color: #dfecff;
+  position: relative;
+  background-image: url("./assets/c.jpg");
+  background-size: contain;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+header,
+h1,
+h2,
+h3 {
+  font-family: "Lugrasimo", cursive;
+  color: #d81159;
+  text-align: center;
+}
+
+header {
+  position: relative;
+  height: 760px;
+  font-size: 3rem;
+  filter: blur(0.05rem) saturate(0.7) contrast(1.5);
+
+  .vgEnglish,
+  .vgGreek {
+    text-shadow: -4px 4px 0px #1a1a1a;
+    position: absolute;
+    margin: 0;
+  }
+
+  .vgEnglish {
+    width: fit-content;
+    left: 62%;
+    top: 30%;
+    transform: translate(-50%);
+    white-space: nowrap;
+
+    .title2 {
+      margin-left: 30%;
+    }
+  }
+
+  .vgGreek {
+    font-size: 3rem;
+    position: absolute;
+    font-family: "Libertinus Serif Display", system-ui;
+    left: 50%;
+    transform: translate(-50%);
+    top: 1%;
+  }
+}
+
+main {
+  width: 100%;
+  font-family: "Noto Serif", sans-serif;
+  margin: auto;
+  position: relative;
+  background-color: #f0efeb;
+  padding: 2rem 5%;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+}
+
+nav {
+  width: 20%;
+  padding-left: 3%;
+}
+
+li {
+  text-decoration: underline;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+li::marker {
+  content: "✶ ";
+  color: #d81159;
+}
+
+.textContainer {
+  width: 60%;
+  text-align: justify;
+}
+
+.left {
+  width: 20%;
+  flex-shrink: 0;
+}
+
+.foregroundImage {
+  position: absolute;
+  inset: 0;
+  background-image: url("./assets/c.png");
+  z-index: 2;
+  background-size: contain;
+}
+
+.imageText {
+  flex: 1 1 0;
+  align-self: stretch;
+  background: url("./assets/g.jpg") center / cover no-repeat;
+  min-width: 220px;
+}
+
+.formatDivider {
+  display: flex;
+  align-items: stretch;
+  gap: 20px;
+}
+
+footer {
+  width: 100%;
+  position: relative;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 0.5rem 2rem 0.5rem 2rem;
+  background-color: #0d3b66;
+  color: white;
+  font-family: "Noto Serif", sans-serif;
+  z-index: 5;
+}
+
+@media only screen and (max-width: 1240px) {
+  main {
+    flex-direction: column;
+  }
+
+  header {
+    height: 220px;
+    font-size: 0.85rem;
+    filter: none;
+
+    .vgEnglish,
+    .vgGreek {
+      text-shadow: -1px 1px 0px #1a1a1a;
+    }
+
+    .vgGreek {
+      font-size: 1.5rem;
+    }
+  }
+
+  main {
+    width: 100%;
+    font-family: "Noto Serif", sans-serif;
+    margin: auto;
+    position: relative;
+    background-color: #f0efeb;
+    padding: 1rem 3%;
+    flex-direction: column;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+  }
+
+  .textContainer {
+    width: 100%;
+  }
+
+  .formatDivider {
+    flex-direction: column;
+  }
+
+  .imageText {
+    flex: none;
+    background: url("./assets/g.jpg") center / cover;
+    width: 220px;
+
+    margin: auto;
+    height: 250px;
+  }
+
+  nav {
+    width: 100%;
+  }
+
+  footer {
+    font-size: small;
+  }
 }

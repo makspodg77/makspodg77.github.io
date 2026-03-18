@@ -1,3 +1,330 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: #8d0253;
+  font-size: 1.6em;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
 body {
-  background-color: #ecfbe6;
+  margin: 0 4rem;
+  background-color: #5d5a58;
+  background-image: url("./assets/background2.png");
+  background-repeat: repeat;
+  outline: #5c0236 12px solid;
+}
+
+header {
+  width: 100%;
+  background-size: contain;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  flex-direction: row-reverse;
+}
+
+.vgEnglish {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  text-shadow: 3px 4px 6px rgb(255, 255, 255);
+
+  gap: 12px;
+  font-size: 4em;
+  margin: 0;
+  transform: rotate(90deg);
+}
+
+.title2 {
+  width: 100%;
+}
+
+.vgGreek::before {
+  content: "Σας προσκαλώ όλους στο εστιατόριο Olimp στην οδό Szczecińska 8E στο Goleniów";
+}
+
+.vgGreek {
+  width: 50%;
+  display: flex;
+  margin: 0;
+}
+
+.foregroundImage {
+  background-image: url("./assets/hercules.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 500px;
+  height: 1000px;
+  left: 10%;
+  top: 30px;
+  position: absolute;
+}
+
+header,
+h1,
+h2,
+h3 {
+  text-shadow: 3px 4px 6px rgba(29, 146, 34, 1);
+}
+
+main {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+nav {
+  margin-top: 20px;
+  padding-right: 20px;
+  margin-bottom: 120px;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: end;
+  align-items: end;
+  font-size: 1.2em;
+}
+
+h2 {
+  margin-left: 135px;
+}
+
+.formatDivider {
+  position: relative;
+}
+
+p {
+  text-shadow: 3px 2px 12px rgb(255, 255, 255);
+  font-weight: bold;
+  padding: 0 0.5em;
+}
+
+.formatDivider > :nth-child(2) > :nth-child(1) {
+  position: absolute;
+  transform: rotate(90deg);
+  right: -10px;
+  top: 85px;
+}
+
+.formatDivider > :nth-child(2) > :nth-child(4) {
+  text-align: justify;
+}
+
+.formatDivider > :nth-child(2) > :nth-child(5) {
+  position: absolute;
+  transform: rotate(90deg);
+  left: -10px;
+  bottom: -200px;
+}
+
+.formatDivider > :nth-child(2) > :nth-child(2) {
+  display: block;
+  width: 90%;
+}
+
+.textContainer > :nth-child(4) {
+  display: block;
+  width: 100%;
+  padding-left: 10%;
+  padding-right: 35%;
+}
+
+.textContainer > :nth-child(5) {
+  width: 100%;
+  padding-left: 135px;
+  text-align: left;
+}
+
+.textContainer > :nth-child(6) {
+  width: 65%;
+}
+
+.formatDivider > :nth-child(2) > :nth-child(3) {
+  width: 100%;
+  padding-right: 135px;
+  text-align: right;
+}
+
+.imageText {
+  height: 1000px;
+  width: 500px;
+  background-image: url("./assets/asclepius.png");
+  background-size: contain;
+  transform: scaleX(-1);
+  position: absolute;
+  right: 0;
+  bottom: -150%;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  font-weight: bolder;
+  gap: 20px;
+  :nth-child(1) {
+    text-shadow: 5px 4px 6px rgb(146, 29, 29);
+  }
+
+  :nth-child(2) {
+    text-shadow: 5px 4px 6px rgb(29, 146, 144);
+  }
+
+  :nth-child(3) {
+    text-shadow: 5px 4px 6px rgb(74, 146, 29);
+  }
+
+  :nth-child(4) {
+    text-shadow: 5px 4px 6px rgb(146, 121, 29);
+  }
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  text-shadow: 3px 2px 12px rgb(255, 255, 255);
+  font-weight: bold;
+  padding-left: 120px;
+  h3 {
+    transform: scaleX(-1);
+    text-shadow: 5px 4px 6px rgb(29, 146, 144);
+  }
+}
+
+@media only screen and (max-width: 1240px) {
+  html {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+  }
+
+  .title2,
+  .title1 {
+    font-size: 0.5em;
+    justify-content: space-between;
+    text-align: right;
+  }
+
+  .vgGreek {
+    font-size: 1em;
+  }
+  .vgEnglish {
+    text-shadow: 3px 4px 6px rgb(255, 255, 255);
+    transform: none;
+    width: 70%;
+    text-align: left;
+  }
+  header {
+    padding: 0;
+    display: flex;
+  }
+
+  .foregroundImage {
+    width: 25%;
+    top: 2%;
+    left: 40%;
+    transform: translateX(-50%);
+  }
+  .vgGreek::before {
+    content: "";
+  }
+  .imageText {
+    width: 100%;
+  }
+
+  nav {
+    font-size: 0.9em;
+    margin-bottom: 0;
+    margin-top: 50px;
+  }
+
+  .imageText {
+    background-image: none;
+    width: 0;
+    height: 0;
+  }
+
+  .formatDivider > :nth-child(2) > :nth-child(1) {
+    transform: none;
+    position: relative;
+    padding: 0 0.5em;
+  }
+
+  .formatDivider > :nth-child(2) > :nth-child(4) {
+    text-align: justify;
+    position: static;
+    padding: 0 0.5em;
+  }
+
+  .formatDivider > :nth-child(2) > :nth-child(5) {
+    transform: none;
+    position: static;
+    padding: 0 0.5em;
+  }
+
+  .formatDivider > :nth-child(2) > :nth-child(2) {
+    display: block;
+    width: 100%;
+    padding: 0 0.5em;
+    position: static;
+  }
+
+  .textContainer > :nth-child(4) {
+    display: block;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    padding: 0 0.5em;
+    position: static;
+  }
+
+  .textContainer > :nth-child(5) {
+    width: 100%;
+    text-align: center;
+    position: static;
+  }
+
+  .textContainer > :nth-child(6) {
+    width: 100%;
+    position: static;
+  }
+
+  .formatDivider > :nth-child(2) > :nth-child(3) {
+    width: 100%;
+    text-align: center;
+    position: relative;
+  }
+  h3,
+  h2 {
+    right: 0 !important;
+    top: 0 !important;
+    left: 0 !important;
+    bottom: 0 !important;
+    width: 100%;
+    margin: 0;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+    text-align: center;
+  }
+
+  p {
+    text-align: left !important;
+    font-size: medium;
+    padding: 0 0.5em;
+  }
+
+  footer {
+    font-size: 0.8em;
+    gap: 4px;
+  }
 }
