@@ -4,7 +4,7 @@
 
 body {
   position: relative;
-  background-image: url("./assets/c.jpg");
+  background-image: url("assets/c.jpg");
   background-size: contain;
   margin: 0;
   overflow-x: hidden;
@@ -99,7 +99,7 @@ li::marker {
 .foregroundImage {
   position: absolute;
   inset: 0;
-  background-image: url("./assets/c.png");
+  background-image: url("assets/c.png");
   z-index: 2;
   background-size: contain;
 }
@@ -107,7 +107,7 @@ li::marker {
 .imageText {
   flex: 1 1 0;
   align-self: stretch;
-  background: url("./assets/g.jpg") center / cover no-repeat;
+  background: url("assets/g.jpg") center / cover no-repeat;
   min-width: 220px;
 }
 
@@ -175,7 +175,7 @@ footer {
 
   .imageText {
     flex: none;
-    background: url("./assets/g.jpg") center / cover;
+    background: url("assets/g.jpg") center / cover;
     width: 220px;
 
     margin: auto;

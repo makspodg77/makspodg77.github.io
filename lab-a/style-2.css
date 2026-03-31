@@ -14,7 +14,7 @@ html {
 body {
   margin: 0 4rem;
   background-color: #5d5a58;
-  background-image: url("./assets/background2.png");
+  background-image: url("assets/background2.png");
   background-repeat: repeat;
   outline: #5c0236 12px solid;
 }
@@ -56,7 +56,7 @@ header {
 }
 
 .foregroundImage {
-  background-image: url("./assets/hercules.svg");
+  background-image: url("assets/hercules.svg");
   background-repeat: no-repeat;
   background-size: contain;
   width: 500px;
@@ -153,7 +153,7 @@ p {
 .imageText {
   height: 1000px;
   width: 500px;
-  background-image: url("./assets/asclepius.png");
+  background-image: url("assets/asclepius.png");
   background-size: contain;
   transform: scaleX(-1);
   position: absolute;
