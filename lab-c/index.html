@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Interactive Map Puzzle Application" />
+        <title>Maksymilian Podgórski (57820) - PTW LAB C</title>
+
+        <!-- Stylesheets -->
+        <link
+            rel="stylesheet"
+            href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+            integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+            crossorigin=""
+        />
+        <link rel="stylesheet" href="styles.css" />
+
+        <!-- External Libraries (Deferred to prevent render-blocking) -->
+        <script
+            defer
+            src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+            crossorigin=""
+        ></script>
+        <script
+            defer
+            src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"
+        ></script>
+
+        <!-- Local Logic (Deferred) -->
+        <script defer src="scripts.js"></script>
+    </head>
+    <body>
+        <header>
+            <nav aria-label="Map Control Actions">
+                <button id="myLocation" aria-label="Find my geolocation">
+                    My location
+                </button>
+                <button
+                    id="downloadMap"
+                    aria-label="Slice map into puzzle canvas"
+                >
+                    Download map
+                </button>
+            </nav>
+        </header>
+
+        <main>
+            <section aria-label="Original Interactive Map">
+                <div id="interactiveMap" class="map-container"></div>
+            </section>
+
+            <section
+                id="puzzleBoard"
+                aria-label="Interactive Puzzle Container"
+            ></section>
+        </main>
+
+        <!-- Decorative styling layout -->
+        <footer aria-hidden="true"></footer>
+    </body>
+</html>
