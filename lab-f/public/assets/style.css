@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
+* { box-sizing: border-box; }
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: "Lexend", sans-serif;
+    font-optical-sizing: auto;
+    background-image: url("rose.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+fieldset {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    padding: 10px 0;
+    justify-content: space-between;
+    border: none;
+}
+
+legend { display: none; }
+
+input[type="radio"] + label, button {
+    display: flex;
+    width: 54px;
+    height: 44px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+input[type="radio"] + label, button, textarea {
+    border-radius: 8px;
+    background-color: rgb(255 255 255 / 0.75);
+    outline: transparent;
+    border: transparent;
+    resize: none;
+}
+
+input[type="radio"]:checked + label, button:hover {
+    background-color: rgb(255 255 255);
+    box-shadow: 0 0 0 2px rgb(55 55 55);
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    height: 300px;
+    background-color: rgb(255 255 255 / 0.20);
+    color: white;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    align-items: center;
+    max-width: 500px;
+    background-color: rgb(0 0 0 / 0.5);
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-top: 10px;
+    justify-content: center;
+    flex-direction: row;
+    gap: 10px;
+}
+
+#swap {
+    background-image: url("swap.svg");
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
