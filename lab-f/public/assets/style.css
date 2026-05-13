@@ -15,6 +15,7 @@ html, body {
 fieldset {
     display: flex;
     width: 100%;
+    min-width: 0;
     gap: 10px;
     padding: 10px 0;
     justify-content: space-between;
@@ -26,13 +27,14 @@ legend { display: none; }
 input[type="radio"] + label, button {
     display: flex;
     width: 54px;
+    min-width: 0;
     height: 44px;
     justify-content: center;
     align-items: center;
     cursor: pointer;
 }
 
-input[type="radio"] + label, button, textarea {
+input[type="radio"] + label, button, textarea, pre {
     border-radius: 8px;
     background-color: rgb(255 255 255 / 0.75);
     outline: transparent;
@@ -42,16 +44,26 @@ input[type="radio"] + label, button, textarea {
 
 input[type="radio"]:checked + label, button:hover {
     background-color: rgb(255 255 255);
-    box-shadow: 0 0 0 2px rgb(55 55 55);
+    box-shadow: 0 0 25px 2px rgb(55 55 55);
 }
-
-textarea {
+form {
     width: 100%;
+    min-width: 0;
+}
+textarea, pre {
+    overflow: auto;
+    word-break: break-all;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
     padding: 10px;
     height: 300px;
+    box-sizing: border-box;
     background-color: rgb(255 255 255 / 0.20);
     color: white;
-}
+ }
 
 input[type="radio"] {
     display: none;
@@ -63,6 +75,7 @@ input[type="radio"] {
     gap: 10px;
     padding: 10px;
     align-items: center;
+    width: 100%;
     max-width: 500px;
     background-color: rgb(0 0 0 / 0.5);
 }

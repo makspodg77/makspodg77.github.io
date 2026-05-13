@@ -32,12 +32,12 @@
                        const input = document.getElementById('input');
                        const result = document.getElementById('result');
 
-                       if (fromVal && toVal && input.value && result.value) {
+                       if (fromVal && toVal && input.value && result.textContent) {
                            document.querySelector(`input[name="from"][value="${toVal}"]`).checked = true;
                            document.querySelector(`input[name="to"][value="${fromVal}"]`).checked = true;
                            const temp = input.value;
-                           input.value = result.value;
-                           result.value = temp;
+                           input.value = result.textContent;
+                           result.textContent = temp;
                        }
                    });
                </script>
@@ -51,7 +51,8 @@
                <?php endforeach ?>
                </fieldset>
 
-               <textarea name="result" id="result" cols="30" rows="10" readonly><?= htmlspecialchars($result ?? '') ?></textarea>           </form>
+               <pre name="result" id="result"><?= htmlspecialchars($result ?? '') ?></pre>
+           </form>
        </div>
    </main>
 </body>

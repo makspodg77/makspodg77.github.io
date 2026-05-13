@@ -25,12 +25,8 @@ $error  = null;
 $input = $_POST['input'] ?? $_COOKIE['last_input'] ?? '';
 $from  = $_POST['from']  ?? $_COOKIE['last_from']  ?? 'json';
 $to    = $_POST['to']    ?? $_COOKIE['last_to']    ?? 'yaml';
-
+$result = $_COOKIE['last_result'] ?? null;
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $input = trim($_POST['input'] ?? '');
-    $from  = $_POST['from'] ?? '';
-    $to    = $_POST['to']   ?? '';
-
     setcookie('last_input', $input, time() + (86400 * 30), '/');
     setcookie('last_from',  $from,  time() + (86400 * 30), '/');
     setcookie('last_to',    $to,    time() + (86400 * 30), '/');
@@ -43,6 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         try {
             $converter = new Converter($encoders[$from], $encoders[$to]);
             $result = $converter->convert($input);
+            setcookie('last_result', $result, time() + (86400 * 30), '/');
         } catch (\Exception $e) {
             $error = 'Conversion failed: ' . $e->getMessage();
         }
