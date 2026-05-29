@@ -1,0 +1,11 @@
+.bg-dark {
+    background-color: #124559 !important;
+}
+
+body, table td, table th {
+    background-color: #F7FBF0 !important;
+}
+
+.bg-light {
+    background-color: #aec3b0 !important;
+}
