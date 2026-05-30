@@ -1,0 +1,22 @@
+<%- include('../partials/header', {
+title: title,
+bodyClass: bodyClass
+}) %>
+
+<h1>Locality List</h1>
+
+<a href="/localities/create">Create new</a>
+
+<ul class="index-list">
+    <% localities.forEach(function (locality) { %>
+        <li>
+            <h3><%= locality.name %></h3>
+            <ul class="action-list">
+                <li><a href="/localities/<%= locality.id %>">Details</a></li>
+                <li><a href="/localities/<%= locality.id %>/edit">Edit</a></li>
+            </ul>
+        </li>
+    <% }) %>
+</ul>
+
+<%- include('../partials/footer') %>

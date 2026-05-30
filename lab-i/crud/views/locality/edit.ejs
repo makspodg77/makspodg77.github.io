@@ -1,0 +1,27 @@
+<%- include('../partials/header', {
+title: `Edit Locality ${locality.name} (${locality.id})`,
+bodyClass: 'edit'
+}) %>
+
+<h1>Edit Locality <%= locality.name %> (<%= locality.id %>)</h1>
+
+<form action="/localities/<%= locality.id %>/edit" method="post" class="edit-form">
+    <%- include('_form', { locality: locality }) %>
+</form>
+
+<ul class="action-list">
+    <li>
+        <a href="/">Back to list</a>
+    </li>
+    <li>
+        <form action="/localities/<%= locality.id %>/delete" method="post">
+            <input
+                    type="submit"
+                    value="Delete"
+                    onclick="return confirm('Are you sure?')"
+            >
+        </form>
+    </li>
+</ul>
+
+<%- include('../partials/footer') %>

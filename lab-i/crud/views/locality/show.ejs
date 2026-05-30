@@ -1,0 +1,22 @@
+<%- include('../partials/header', {
+title: `${locality.name} (${locality.id})`,
+bodyClass: 'show'
+}) %>
+
+<h1><%= locality.name %></h1>
+
+<article>
+    <%= locality.municipality %>
+    <%= locality.county %>
+</article>
+
+<ul class="action-list">
+    <li>
+        <a href="/">Back to list</a>
+    </li>
+    <li>
+        <a href="/localities/<%= locality.id %>/edit">Edit</a>
+    </li>
+</ul>
+
+<%- include('../partials/footer') %>

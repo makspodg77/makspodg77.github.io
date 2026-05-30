@@ -1,0 +1,14 @@
+<%- include('../partials/header', {
+title: 'Create Locality',
+bodyClass: 'edit'
+}) %>
+
+<h1>Create Locality</h1>
+
+<form action="/localities/create" method="post" class="edit-form">
+    <%- include('_form', { locality: null }) %>
+</form>
+
+<a href="/">Back to list</a>
+
+<%- include('../partials/footer') %>

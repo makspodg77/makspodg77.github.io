@@ -1,0 +1,24 @@
+<div class="form-group">
+    <label for="name">Name</label>
+    <input
+            type="text"
+            id="name"
+            name="name"
+            value="<%= locality ? locality.name : '' %>"
+    >
+</div>
+
+<div class="form-group">
+    <label for="municipality">Municipality</label>
+    <textarea id="municipality" name="municipality"><%= locality ? locality.municipality : '' %></textarea>
+</div>
+
+<div class="form-group">
+    <label for="county">County</label>
+    <textarea id="county" name="county"><%= locality ? locality.county : '' %></textarea>
+</div>
+
+<div class="form-group">
+    <label></label>
+    <input type="submit" value="Submit">
+</div>
