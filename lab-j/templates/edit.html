@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Edit Locality</h1>
+
+{% set button_label = 'Update' %}
+{% include "_form.html" %}
+
+{% include "_delete_form.html" %}
+
+<a href="/localities">Back to list</a>
+
+{% endblock %}

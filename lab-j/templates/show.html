@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>{{ locality.name }}</h1>
+
+<article>
+    {{ locality.municipality }}
+    {{ locality.county }}
+</article>
+
+<ul class="action-list">
+    <li>
+        <a href="/localities">Back to list</a>
+    </li>
+    <li>
+        <a href="/localities/{{ locality.id }}/edit">Edit</a>
+    </li>
+</ul>
+
+{% endblock %}
